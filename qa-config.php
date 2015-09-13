@@ -180,6 +180,8 @@
 	file to override the default setting. Just make sure you know what you're doing!
 */
 
+	define('QA_DB_MAX_CONTENT_LENGTH', 20000);
+
 
 /*
 	Omit PHP closing tag to help avoid accidental output

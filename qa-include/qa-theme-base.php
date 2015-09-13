@@ -220,7 +220,7 @@ class qa_html_theme_base
 
 	public function html()
 	{
-		$attribution = '<!-- Powered by Question2Answer - http://www.question2answer.org/ -->';
+		$attribution = '';
 		$this->output(
 			'<html>',
 			$attribution
@@ -834,9 +834,9 @@ class qa_html_theme_base
 		// Hi there. I'd really appreciate you displaying this link on your Q2A site. Thank you - Gideon
 
 		$this->output(
-			'<div class="qa-attribution">',
+			/*'<div class="qa-attribution">',
 			'Powered by <a href="http://www.question2answer.org/">Question2Answer</a>',
-			'</div>'
+			'</div>'*/
 		);
 	}
 

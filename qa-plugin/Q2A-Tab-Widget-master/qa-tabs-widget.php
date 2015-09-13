@@ -204,8 +204,8 @@ class qa_tabs_widget {
 		
 		$themeobject->output(
 			'
-			  <ul class="tabs">
-				<li><a href="#tab1">' . qa_opt('tw_popular_lable') . '</a></li>
+			  <ul class="tabs nav nav-tabs">
+				<li><a href="#tab1" class="active">' . qa_opt('tw_popular_lable') . '</a></li>
 				<li><a href="#tab2">' . qa_opt('tw_recent_lable') . '</a></li>
 			  </ul>
 			  <div class="tab-content" id="tab1">
@@ -239,8 +239,8 @@ class qa_tabs_widget {
 					$thumb= '<div class="tab-div-thumb"><a class="tab-link-thumbnail" href="' . $questionlink . '"><img class="tab-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
 			}
 			$themeobject->output('<li>' . $thumb);
-			$themeobject->output('<div class="tab-div-body"><a class="tab-link" href="' . $questionlink . '"><h4 class="tab-link-header">' . $question['title'] . '</h4>');
-			$themeobject->output('<span class="tab-time">' . $when . '</span></a></div></li>');
+			$themeobject->output('<div class="tab-div-body"><a class="tab-link" href="' . $questionlink . '"><p class="tab-link-header">' . $question['title'] . '</p></a>');
+			$themeobject->output('<span class="tab-time">' . $when . '</span></div></li>');
 			$ads_content = qa_opt('tw_ads');
 			if( ($i==$AdsPos) && !empty($ads_content))
 				$themeobject->output('<div class="tab-ads">' . qa_opt('tw_ads') . '</div>');
@@ -280,8 +280,8 @@ class qa_tabs_widget {
 					$thumb= '<div class="tab-div-thumb"><a class="tab-link-thumbnail" href="' . $questionlink . '"><img class="tab-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
 			}
 			$themeobject->output('<li>' . $thumb);
-			$themeobject->output('<div class="tab-div-body"><a class="tab-link" href="' . $questionlink . '"><h4 class="tab-link-header">' . $question['title'] . '</h4>');
-			$themeobject->output('<span class="tab-time">' . $when . '</span></a></div></li>');
+			$themeobject->output('<div class="tab-div-body"><a class="tab-link" href="' . $questionlink . '"><p class="tab-link-header">' . $question['title'] . '</p></a>');
+			$themeobject->output('<span class="tab-time">' . $when . '</span></div></li>');
 			$ads_content = qa_opt('tw_ads');
 			if( ($i==$AdsPos) && !empty($ads_content))
 				$themeobject->output('<div class="tab-ads">' . qa_opt('tw_ads') . '</div>');

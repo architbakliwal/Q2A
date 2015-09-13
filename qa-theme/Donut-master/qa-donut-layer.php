@@ -54,7 +54,8 @@ class qa_html_theme extends qa_html_theme_base {
 			qa_html_theme_base::head_css();
 			$css_paths = array(
 					'fonts'     => 'css/font-awesome.min.css',
-					'bootstrap' => 'css/bootstrap.min.css',
+					// 'bootstrap' => 'css/bootstrap.min.css',
+					'bootstrap' => 'css/bootstrap.css',
 					'donut'     => 'css/donut.css',
 					'responsive' => 'css/donut-responsive.css' ,
 					);
@@ -477,9 +478,9 @@ class qa_html_theme extends qa_html_theme_base {
 		{
 			/*Please do not remove this as you are using this for free . I will appriciate if you keep this on your site */
 			$this->output(
-				'<div class="qa-attribution">',
+				/*'<div class="qa-attribution">',
 				'&nbsp;| Donut Theme by <a href="http://amiyasahu.com">Amiya Sahu</a>',
-				'</div>'
+				'</div>'*/
 			);
 
 			qa_html_theme_base::attribution();
@@ -688,14 +689,14 @@ class qa_html_theme extends qa_html_theme_base {
 		{
 			if (count($navigation)) {
 				foreach ($navigation as $key => $nav_item) {
-					/*if ($key=='questions') {
+					if ($key=='questions') {
 						$sub_nav = donut_get_sub_navigation('questions' , $this->template);
 						if (count($sub_nav)) {
 							$this->donut_nav_bar_drop_down($nav_item, $sub_nav );
 						}else {
 							$this->donut_nav_bar_item($nav_item);
 						}
-					}else */if ($key=='unanswered') {
+					}else if ($key=='unanswered') {
 						$sub_nav = donut_get_sub_navigation('unanswered');
 						if (count($sub_nav)) {
 							$this->donut_nav_bar_drop_down($nav_item, $sub_nav );
@@ -757,6 +758,26 @@ class qa_html_theme extends qa_html_theme_base {
 			$this->output('<li '.$class.'><a href="'.$nav_item['url'].'">'.$icon . $nav_item['label'].'</a></li>');
 		}
 
+
+		/**
+		 * prints a single nav-bar item with sub menu
+		 * @param  array $nav_item navigation item 
+		 * @return null
+		 */
+		function donut_nav_bar_item_sub($nav_item)
+		{
+			$class  = (!!@$nav_item['class']) ? $nav_item['class'] .' ' : '' ;
+			$class .= (!!@$nav_item['selected']) ? 'active' : '' ;
+			
+			if (!empty($class)) {
+				$class = 'class="'.$class.'"' ;
+			}
+
+			$icon   = (!!@$nav_item['icon']) ? donut_get_fa_icon(@$nav_item['icon']) : '' ;
+
+			$this->output('<li '.$class.'><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'.$icon . $nav_item['label'].' <span class="caret"></a>');
+		}
+
 		/**
 		 * Prints the drop down menu 
 		 * @param  array $nav_item      the navigation item 
@@ -764,6 +785,24 @@ class qa_html_theme extends qa_html_theme_base {
 		 * @return null
 		 */
 		function donut_nav_bar_drop_down($nav_item , $sub_nav_items)
+		{
+			$class = (!!@$nav_item['selected']) ? 'active' : '' ;
+			
+			if (!empty($sub_nav_items) && count($sub_nav_items)) {
+				$nav_item['class'] = "dropdown" ;
+				$this->donut_nav_bar_item_sub($nav_item);
+				$this->output('<ul class="dropdown-menu" role="menu">');
+				foreach ($sub_nav_items as $key => $sub_nav_item) {
+					$this->donut_nav_bar_item($sub_nav_item);
+				}
+				$this->output('</ul>');
+				$this->output('</li>');
+			}else {
+				$this->donut_nav_bar_item($nav_item);
+			}
+		}
+
+		/*function donut_nav_bar_drop_down($nav_item , $sub_nav_items)
 		{
 			$class = (!!@$nav_item['selected']) ? 'active' : '' ;
 			
@@ -781,7 +820,7 @@ class qa_html_theme extends qa_html_theme_base {
 			}else {
 				$this->donut_nav_bar_item($nav_item);
 			}
-		}
+		}*/
 
 		/**
 		 * prints sidebar navigation 

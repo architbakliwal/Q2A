@@ -112,7 +112,7 @@
 		'nav_no_selected_answer' => 'No selected answer',
 		'nav_no_upvoted_answer' => 'No upvoted answer',
 		'nav_qa' => 'Q&A',
-		'nav_qs' => 'Questions',
+		'nav_qs' => 'Q&A',
 		'nav_register' => 'Register',
 		'nav_tags' => 'Tags',
 		'nav_unanswered' => 'Unanswered',
