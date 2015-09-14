@@ -1293,7 +1293,7 @@ div .header-banner {
 /*-- content and widgets --*/
 
 .qa-ask-box {
-    background: #428bca;
+    background: #2C3E50;
     border-radius: 3px;
 }
 
@@ -1343,8 +1343,9 @@ div .header-banner {
 /* Votes */
 
 .qa-voting {
-    background: #d9edf7;
-    border: 1px solid #bce8f1;
+    background: #2c3e50;
+    border: 1px solid #2c3e50;
+    color: #ffffff;
     float: left;
     width: 65px;
     height: 60px;
@@ -1727,9 +1728,9 @@ fieldset[disabled] .qa-voted-down-button {
 /* Answers and views count */
 
 .qa-a-count {
-    background: #dff0d8;
-    border: 1px solid #d6e9c6;
-    color: #3c763d;
+    background: #00B16A;
+    border: 1px solid #00B16A;
+    color: #ffffff;
     float: left;
     width: 60px;
     height: 60px;
@@ -1740,15 +1741,15 @@ fieldset[disabled] .qa-voted-down-button {
 }
 
 .qa-a-count-zero {
-    background: #fcf8e3;
-    border: 1px solid #ebccd1;
-    color: #a94442;
+    background: #6C7A89;
+    border: 1px solid #6C7A89;
+    color: #ffffff;
 }
 
 .qa-a-count-selected {
-    background: #c1e2b3;
-    border: 1px solid #bbdba1;
-    color: #2b542c;
+    background: #00B16A;
+    border: 1px solid #00B16A;
+    color: #ffffff;
 }
 
 .qa-a-count-data {
@@ -6063,7 +6064,7 @@ fieldset[disabled] .qa-a-selected {
 .qa-tag-link {
     margin-left: 20px;
     padding: 0 10px 0 12px;
-    background: #428bca;
+    background: #4183D7;
     color: #fff;
     text-decoration: none;
     -webkit-transition: all 0.75s ease-in-out;

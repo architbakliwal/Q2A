@@ -59,7 +59,7 @@ class qa_ask_box
 			}
 ?>
 				<td class="qa-form-tall-data" style="padding:8px;" width="*">
-					<input name="title" type="text" class="qa-form-tall-text" style="width:95%;">
+					<input name="title" type="text" class="qa-form-tall-text" style="width:95%;" placeholder="Type your question and press enter">
 				</td>
 			</tr>
 		</table>

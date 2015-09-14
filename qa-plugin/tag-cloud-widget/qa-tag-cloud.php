@@ -116,9 +116,14 @@ class qa_tag_cloud
 
 		$maxcount = reset($populartags);
 
-		$themeobject->output(sprintf('<h2 style="margin-top: 0; padding-top: 0;">%s</h2>', qa_lang_html('main/popular_tags')));
 
-		$themeobject->output('<div style="font-size: 10px;">');
+		// $themeobject->output(sprintf('<h2 style="margin-top: 0; padding-top: 0;">%s</h2>', qa_lang_html('main/popular_tags')));
+
+		// $themeobject->output('<div style="font-size: 10px;">');
+
+		$themeobject->output(sprintf('<div class="panel panel-primary" style="padding: 0;"><div class="panel-heading"><h3 class="panel-title">%s</h3></div>', qa_lang_html('main/popular_tags')));
+
+		$themeobject->output('<div class="panel-body">');
 
 		$maxsize = qa_opt('tag_cloud_font_size');
 		$minsize = qa_opt('tag_cloud_minimal_font_size');
@@ -139,6 +144,7 @@ class qa_tag_cloud
 			}
 		}
 
-		$themeobject->output('</div>');
+		// $themeobject->output('</div>');
+		$themeobject->output('</div></div>');
 	}
 }
