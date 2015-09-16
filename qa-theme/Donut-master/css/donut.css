@@ -785,6 +785,7 @@ header .search-bar {
     margin: 40px 0 20px;
     border-bottom: 1px solid #eeeeee;
     margin: 20px 0 10px;
+    font-size: 30px;
 }
 
 img {
@@ -4620,21 +4621,20 @@ fieldset[disabled] .qa-form-basic-button {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    background: #f4f4f4;
-    border: 1px solid #c7dce6;
-    color: #444;
+    background: #2C3E50;
+    border: 1px solid #2C3E50;
+    color: #ffffff;
     font-size: 14px;
     text-align: center;
     clear: both;
     padding: 8px;
     margin-top: 22px;
     border-radius: 3px;
-    -webkit-box-shadow: 0 10px 15px 0 #ffffff inset, 0 0 5px 0 rgba(0, 0, 0, 0.05);
-    box-shadow: 0 10px 15px 0 #ffffff inset, 0 0 5px 0 rgba(0, 0, 0, 0.05);
 }
 
 .qa-suggest-next a {
     font-weight: bold;
+    color: #18bc9c;
 }
 
 .qa-suggest-next a:hover {
@@ -4852,7 +4852,7 @@ a.qa-browse-cat-link:visited {
 }
 
 .qa-q-view-content .entry-content {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .qa-q-view-avatar {
@@ -5229,7 +5229,7 @@ a.qa-browse-cat-link:visited {
 }
 
 .qa-a-item-content {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 16px;
     word-wrap: break-word;
 }
